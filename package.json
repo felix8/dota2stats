@@ -1,0 +1,27 @@
+{
+  "name": "Dota2Stats",
+  "version": "0.0.0",
+  "author": "Arijit Choudhury<arijit.choudhury@outlook.com>",
+  "description": "Webapp for charting Dota2 game stats",
+  "contributors": [
+    {
+      "name": "Chaitanya Sharma",
+      "email": "gopi.daiict@gmail.com"
+    }
+  ],
+  "main": "./server.js",
+  "keywords": [
+    "dota2",
+    "analytics",
+    "express"
+  ],
+  "dependencies": {
+    "jade": "*",
+    "express": "~3.1.0"
+  },
+  "noAnalyze": true,
+  "license": "Apache",
+  "engines": {
+    "node": ">=0.6.14"
+  }
+}
