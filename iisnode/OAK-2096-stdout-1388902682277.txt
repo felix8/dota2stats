@@ -1,0 +1,4 @@
+Express server listening on port \\.\pipe\5ef87ad2-c29d-469f-9c39-7746620b6b44
+[90mGET / [32m200 [90m42ms - 5.08kb[0m
+[90mGET /javascripts/Charts.js [33m404 [90m2ms[0m
+[90mGET /stylesheets/images/pic.jpg [33m404 [90m1ms[0m

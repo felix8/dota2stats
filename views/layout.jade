@@ -2,7 +2,10 @@
 html(xmlns='http://www.w3.org/1999/xhtml')
 head
     meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='initial-scale = 1, user-scalable = no')
     title
+    script(src="javascripts/Charts.js")
+    script(src="javascripts/jquery-1.10.2.min.js")
     meta(name='keywords', content='')
     meta(name='description', content='')
     link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900', rel='stylesheet')
@@ -20,7 +23,7 @@ head
         #menu
           ul
             li.current_page_item
-              a(href='#', accesskey='1', title='') Explore
+              a(href='/', accesskey='1', title='') Explore
             li
               a(href='#', accesskey='2', title='') Help
     #header-featured
@@ -34,10 +37,18 @@ head
             a(href='http://www.chartjs.org/', rel='nofollow') Chart.js
             |  and the 
             a(href='http://dev.dota2.com/showthread.php?t=47115', rel='nofollow') Dota 2 Match History WebAPI
-            | . Then publish your work for others to use!
-          a.button(href='#') Start!
+            | .
+          ul
+            li
+                | <strong><i>1.</i></strong> Design a Dota2 query
+            li
+                | <strong><i>2.</i></strong> Chart it! Tweak query until its perfect. Iterate.
+            li
+                | <strong><i>3.</i></strong> Publish it for others to see!
+          canvas#sampleChart(width='400', height='400')
+          a#start-button.button(href='#') Start!
     #wrapper
-      #page.container
+      #page.container(style='display: none')
         #content
           .title
             h2 Hello there, Stranger!
@@ -116,10 +127,40 @@ head
               |  page. Try the Dota 2 
               a(href='http://dev.dota2.com/', rel='nofollow') developer forum
               | .
-            a.button(href='http://blog.dota2.com/') Get Dota2
+            a.button(href='http://blog.dota2.com/') Get Dota2      
     #copyright.container
       p
         | Copyright (c) 2013 dota2stats.azurewebsites.net. All rights reserved.
         | | Design by 
         a(href='http://www.freecsstemplates.org/', rel='nofollow') FreeCSSTemplates.org
         | .
+    
+    script.
+      $(document).ready(function(){
+        $("#start-button").click(function(){
+          $("#header-featured").slideUp("slow");
+          $("#page").slideDown();
+        });
+        
+        //Get the context of the canvas element we want to select
+        var data = {
+          labels : ["January","February","March","April","May","June","July"],
+          datasets : [
+            {
+              fillColor : "rgba(220,220,220,0.5)",
+              strokeColor : "rgba(220,220,220,1)",
+              pointColor : "rgba(220,220,220,1)",
+              pointStrokeColor : "#fff",
+              data : [65,59,90,81,56,55,40]
+            },
+            {
+              fillColor : "rgba(151,187,205,0.5)",
+              strokeColor : "rgba(151,187,205,1)",
+              pointColor : "rgba(151,187,205,1)",
+              pointStrokeColor : "#fff",
+              data : [28,48,40,19,96,27,100]
+            }
+          ]
+        }
+        var myLine = new Chart(document.getElementById("sampleChart").getContext("2d")).Line(lineChartData);
+      });
