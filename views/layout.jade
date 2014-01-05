@@ -45,7 +45,8 @@ head
                 | <strong><i>2.</i></strong> Chart it! Tweak query until its perfect. Iterate.
             li
                 | <strong><i>3.</i></strong> Publish it for others to see!
-          canvas#sampleChart(width='400', height='400')
+            li
+              canvas#sampleChart(width='700', height='400')
           a#start-button.button(href='#') Start!
     #wrapper
       #page.container(style='display: none')
@@ -162,5 +163,5 @@ head
             }
           ]
         }
-        var myLine = new Chart(document.getElementById("sampleChart").getContext("2d")).Line(lineChartData);
+        var myLine = new Chart(document.getElementById("sampleChart").getContext("2d")).Line(data);
       });

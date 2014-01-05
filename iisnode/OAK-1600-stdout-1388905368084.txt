@@ -1,3 +1,11 @@
 Express server listening on port \\.\pipe\99624248-96ad-47e0-8b9a-36dd2bf5dc3a
 [90mGET / [32m200 [90m40ms - 5.88kb[0m
 [90mGET /stylesheets/images/pic.jpg [33m404 [90m3ms[0m
+[90mGET / [36m304 [90m9ms[0m
+[90mGET /stylesheets/images/pic.jpg [33m404 [90m0ms[0m
+[90mGET /javascripts [36m301 [90m1ms[0m
+[90mGET /javascripts/ [33m404 [90m0ms[0m
+[90mGET / [36m304 [90m5ms[0m
+[90mGET /stylesheets/images/pic.jpg [33m404 [90m1ms[0m
+[90mGET / [36m304 [90m6ms[0m
+[90mGET /stylesheets/images/pic.jpg [33m404 [90m0ms[0m
