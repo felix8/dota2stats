@@ -2,14 +2,90 @@
 html(xmlns='http://www.w3.org/1999/xhtml')
 head
     meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
-    block head
+    title
+    meta(name='keywords', content='')
+    meta(name='description', content='')
     link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900', rel='stylesheet')
     link(href='stylesheets/default.css', rel='stylesheet', type='text/css', media='all')
-    link(href='stylesheets/fonts.css', rel='stylesheet', type='text/css', media='all')
+    link(href='fonts/font-awesome-4.0.3/css/font-awesome.min.css', rel='stylesheet', type='text/css', media='all')
     //if IE 6
       link(href='default_ie6.css', rel='stylesheet', type='text/css')
   body
-  	  block content
+    #header-wrapper
+      #header.container
+        #logo
+          h1
+            span.fa.fa-bug
+            a(href='#') Dota2Stats
+        #menu
+          ul
+            li.current_page_item
+              a(href='#', accesskey='1', title='') Explore
+            li
+              a(href='#', accesskey='2', title='') Help
+    #header-featured
+      #banner-wrapper
+        #banner.container
+          h2 Get better at Dota2 with data!
+          p
+            | Visualize 
+            strong Dota2
+            |  game data using 
+            a(href='http://www.chartjs.org/', rel='nofollow') Chart.js
+            |  and the 
+            a(href='http://dev.dota2.com/showthread.php?t=47115', rel='nofollow') Dota 2 Match History WebAPI
+            | . Then publish your work for others to use!
+          a.button(href='#') Start!
+    #wrapper
+      #page.container
+        #content
+          .title
+            h2 Hello there, Stranger!
+            span.byline Interested? Read on...
+          p
+            img.image.image-full(src='images/570_screenshots_2014-01-02_00001.jpg', alt='')
+            | Source: 
+            a(href='http://steamcommunity.com/app/570/screenshots/', rel='nofollow') Steam Workshop
+          p
+            | First off, what's Dota2? Dota2 is a pretty serious MOBA (for lack of a better word) which is also growing as an ESport. There's a sort of world championship every year called the 
+            a(href='http://www.dota2.com/international/home/overview/', rel='nofollow') International
+            |  held in Seattle, WA, US. The game is a 5-a-side tower defense game where you control a hero and accumulate levels by killing enemy heroes and creeps.
+            | For more information, please visit the links at the bottom of the page.
+          p
+            | There are many strategies and combinations possible; a lot of traction is coming up with collecting stats. Dota2Stats can be used to analyse Dota2 game stats whichever way you want. You can write queries, and then visualize them using charts. 
+            strong And if you like it, publish it for others to see!
+        #sidebar
+          #stwo-col
+            .sbox1
+              h2 Top Contributors
+              ul.style2
+                li
+                  a(href='#') Rhasta
+                li
+                  a(href='#') Gopi
+                li
+                  a(href='#') nerds
+                li
+                  a(href='#') panterspot
+                li
+                  a(href='#') BimBam
+                li
+                  a(href='#') twitch.tv/ghostdlr
+            .sbox2
+              h2 Top Queries
+              ul.style2
+                li
+                  a(href='#') Most Matches Played
+                li
+                  a(href='#') Time Spent Playing
+                li
+                  a(href='#') Verified
+                li
+                  a(href='#') Game Impact
+                li
+                  a(href='#') Damage and Healing
+                li
+                  a(href='#') Farm
       #featured-wrapper
         #featured.extra2.container
           .main-title
@@ -21,9 +97,9 @@ head
               h2 Contribute Code
               span.byline We have everything up on GitHub.
             p
-              | Dota2Stats is powered by
+              | Dota2Stats is powered by 
               a(href='http://nodejs.org/', rel='nofollow') Node.js
-              | and
+              |  and 
               a(href='http://www.windowsazure.com/en-us/', rel='nofollow') Windows Azure
               | . Review our code!
             a.button(href='https://github.com/felix8/dota2stats') Visit GitHub repo
@@ -33,18 +109,17 @@ head
               h2 Contribute Ideas
               span.byline Improve the Dota2 community. 
             p
-              | Start with the
+              | Start with the 
               a(href='http://blog.dota2.com/', rel='nofollow') official Dota2 blog
-              | . Visit the
+              | . Visit the 
               a(href='http://www.reddit.com/r/dota2', rel='nofollow') Reddit
-              | page. Try the Dota 2
+              |  page. Try the Dota 2 
               a(href='http://dev.dota2.com/', rel='nofollow') developer forum
               | .
             a.button(href='http://blog.dota2.com/') Get Dota2
     #copyright.container
       p
-        | Copyright (c) 2013 dota2stats.azurewebsites.net. All rights reserved. | Photos by
-        a(href='http://fotogrph.com/') Fotogrph
-        | | Design by
+        | Copyright (c) 2013 dota2stats.azurewebsites.net. All rights reserved.
+        | | Design by 
         a(href='http://www.freecsstemplates.org/', rel='nofollow') FreeCSSTemplates.org
         | .
